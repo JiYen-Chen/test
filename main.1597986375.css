@@ -1,0 +1,990 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    max-width: 640px;
+    background-color: white;
+    font-family: Arial, Helvetica, 微軟正黑體, sans-serif;
+    font-size: 14px;
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    width: 100%;
+    overflow: auto;
+    background-color: #f7f7f7;
+}
+
+ol, ul {
+    padding-left: 20px;
+}
+
+.container {
+    position: relative;
+    min-height: 100%;
+    margin-bottom: -8px; /* for footer */
+    background-color: #f7f7f7;
+}
+
+/** ## Announcement ################################### */
+
+.announcement-bar {
+    padding: 7px;
+    background-color: #f0ad4e;
+    border: 2px solid #eea236;
+    color: #ffffff;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+/** ## Button ######################################### */
+
+.btn {
+    display: inline-block;
+    padding: 3px 12px;
+    font-weight: 400;
+    line-height: 1.7em;
+    text-align: center;
+    border: 1px solid #b3b3b3;
+    border-radius: 3px;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+a.btn {
+    text-decoration: none;
+}
+
+.btn-default {
+    background-color: #f7f7f7;
+    color: #2b2b2b;
+}
+
+.btn-default:hover {
+    background-color: #f9f9f9;
+    color: #2b2b2b;
+}
+
+.btn-primary {
+    background-color: #0059bc;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.btn-brand {
+    background-color: #00592d;
+    border: 1px solid #004b25;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.btn.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: .50;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/** ## Text ######################################### */
+
+.text-center {
+    text-align: center;
+}
+
+.text-brand {
+    color: #00592d;
+}
+
+.text-warning {
+    color: red;
+}
+
+/**
+ * ######################################################
+ *   Error Page
+ * ######################################################
+ */
+
+.error-block {
+    margin: 40px auto;
+    padding: 10px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.error-block-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.error-block-title.success {
+    color: #00592d;
+}
+
+.error-block-title.error {
+    color: #ce0707;
+}
+
+.error-block-message {
+    font-size: 14px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+/**
+ * ######################################################
+ *   Sign In Page
+ * ######################################################
+ */
+
+.sign-in-header-empty {
+    margin: 0 auto;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.sign-in-header-empty img {
+    width: 150px;
+}
+
+.sign-in-header {
+    text-align: center;
+    background-color: #fce8ac;
+}
+
+.sign-in-header-img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.sign-in-siren {
+    text-align: center;
+}
+
+.sign-in-siren-img {
+    max-width: 100px;
+    margin: -50px auto 0;
+}
+
+.sign-in-content {
+    margin: 15px 30px;
+}
+
+.sign-in-title {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 26px;
+}
+
+.sign-in-buttons {
+    margin: 30px;
+}
+
+.sign-in-button {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.sign-in-button a {
+    display: block;
+    text-align: center;
+}
+
+.sign-in-button img {
+    width: 100%;
+    max-width: 192px;
+}
+
+.sign-in-note {
+    margin: 20px auto;
+    font-size: 14px;
+    max-width: 350px;
+}
+
+.sign-in-separator {
+    border: 2px solid #00592d;
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * ######################################################
+ *   Index Page
+ * ######################################################
+ */
+
+/** ## Popup ########################################## */
+
+.popup {
+    position: fixed;
+    background-color: rgba(50, 50, 50, 0.75);
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+    top: 0;
+    left: 0;
+}
+
+.popup-modal {
+    position: fixed;
+    overflow: auto;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    background-color: #ffffff;
+    width: 80%;
+    max-width: 400px;
+    z-index: 91;
+    border-right: 5px solid #00592d;
+    border-left: 5px solid #00592d;
+}
+
+.popup-title {
+    min-height: 50px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #dddddd;
+    background-color: #f7f7f7;
+}
+
+.popup-message {
+    min-height: 100px;
+    padding: 20px;
+    text-align: left;
+}
+
+.popup-close {
+    min-height: 50px;
+    padding: 20px;
+    border-top: 1px solid #dddddd;
+    background-color: #f7f7f7;
+}
+
+.popup-image-block {
+    text-align: center;
+}
+
+.popup-image {
+    max-width: 250px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/** ## Header ########################################### */
+.top-bar {
+    position: relative;
+    height: 56px;
+    margin: 0 auto;
+    padding-left: 5px;
+    padding-top: 5px;
+    border-top: 5px solid #00592d;
+    background-color: #f7f7f7;
+}
+
+.top-bar-left {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.top-bar-right {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    vertical-align: top;
+}
+
+.top-bar-icon {
+    display: inline-block;
+    width: 36px;
+}
+
+.top-bar-title {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.top-bar-menu {
+    vertical-align: top;
+    width: 36px;
+    display: inline-block;
+}
+
+/** ## Footer ########################################### */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 8px; /* change container padding bottom as well */
+    background-color: #00592d;
+    color: #ffffff;
+}
+
+/** ## Menu ############################################# */
+
+.menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    display: none;
+    max-width: 1060px;
+    width: 100%;
+}
+
+.menu-content {
+    height: 50px;
+    padding: 10px;
+}
+
+.menu-item {
+    display: block;
+    line-height: 36px;
+    padding-left: 20px;
+    color: #ffffff;
+    background-color: #00592d;
+    text-align: left;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.profile {
+    display: block;
+    text-align: right;
+}
+
+.profile div {
+    max-width: 80%;
+    font-size: 14px;
+    line-height: 24px;
+    vertical-align: top;
+    margin-left: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+/** ## Tabs ############################################# */
+
+.tabs-menu {
+    width: 100%;
+    margin: 0 auto;
+    height: 36px;
+    text-align: center;
+    font-size: 0;
+}
+
+.tabs-menu-item {
+    width: 49%;
+    display: inline-block;
+    height: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+.tabs-menu-item-active {
+    border-bottom: 5px solid #00592d;
+}
+
+.tab {
+    position: relative;
+    background-color: #f7f7f7;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.tab-content {
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+    display: none;
+}
+
+/** ## Campaign list ##################################### */
+
+/** When No Campaigns */
+
+.no-campaigns {
+    margin: 125px auto 0;
+    text-align: center;
+}
+
+.no-campaigns-logo {
+    width: 150px;
+}
+
+.no-campaigns-wodring {
+    font-size: 18px;
+}
+
+/** Campaign List - Main Campaign */
+
+.campaign-list-main-banner {
+    background-color: #fce8ac;
+    text-align: center;
+}
+
+.campaign-list-main-banner img {
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.campaign-list-main-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.campaign-list-main-text {
+    padding: 10px 0;
+}
+
+.campaign-list-main-content {
+    padding: 20px 10px
+}
+
+.campaign-list-main-action {
+    padding: 5px 0;
+}
+
+.campaign-list-main-action a {
+    color: #00592d;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px dotted;
+}
+
+.campaign-list-main-action a:after {
+    content: "\00a0\00BB";
+}
+
+/** Campaign List - Other Campaign */
+
+.campaign-list {
+    padding: 20px 0;
+    min-height: 100px;
+}
+
+.campaign-list-item {
+    padding: 5px;
+}
+
+.campaign-list-item:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.campaign-list-item:nth-child(even) {
+    background-color: #efefef;
+}
+
+.campaign-list p {
+    vertical-align: top;
+    margin: 5px 0;
+}
+
+.campaign-list-item-icon {
+    width: 90px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.campaign-list-item-title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #00592d;
+}
+
+.campaign-list-item-text {
+    padding-bottom: 10px;
+    font-size: 11px;
+}
+
+.campaign-list-item-action {
+    overflow: auto;
+}
+
+.campaign-list-item-action a {
+    color: #00592d;
+    text-decoration: none;
+    border-bottom: 2px dotted;
+    float: right;
+    font-size: 12px;
+}
+
+.campaign-list-item-action a:after {
+    content: "\00a0\00BB";
+}
+
+/** ## Coupons ########################################## */
+
+.coupons-note {
+    text-align: center;
+    margin: 150px auto 0;
+}
+
+#coupons {
+    display: none;
+}
+
+#coupons-loading {
+    display: none;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 150px;
+}
+
+#coupons-loading img {
+    width: 64px;
+}
+
+#coupons-error {
+    display: none;
+    text-align: center;
+    margin: 150px auto 0;
+}
+
+.coupons-top-bar {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 0;
+    height: 36px;
+}
+
+.coupons-top-bar-segment {
+    width: 49%;
+    font-size: 16px;
+    line-height: 18px;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+#coupons-reload {
+    margin: 5px 0;
+    text-align: right;
+    float: right;
+}
+
+#coupons-reload span {
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+#coupons-reload img {
+    width: 20px;
+    vertical-align: middle;
+}
+
+#coupons-list {
+    padding: 0 8px;
+}
+
+#coupons-footnote {
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 300px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/** ## Coupon ########################################### */
+
+.coupon {
+    position: relative;
+    width: 100%;
+    margin: 8px auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+    min-height: 110px;
+    box-shadow: 0 1px 1px 0 #a5a5a5;
+    border: 1px solid #e3e3e3;
+}
+
+.coupon-img {
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    margin-top: -50px;
+    margin-left: 5px;
+    border-radius: 3px;
+}
+
+.coupon-content {
+    margin-left: 115px;
+    margin-top: 15px;
+}
+
+.coupon-title {
+    font-weight: bold;
+    font-size: 14px;
+    padding: 3px 0;
+    margin: 10px 5px 10px 0;
+}
+
+.coupon-expired {
+    background-color: #ffffff;
+}
+
+.coupon-expired:before {
+    content: "";
+    background: rgba(247, 247, 247, 0.7) url("/starbucks/img/expire.png") no-repeat center center;
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+}
+
+.coupon-property {
+    font-size: 12px;
+    padding: 3px 0;
+}
+
+.coupon-property span {
+    margin-right: 10px;
+}
+
+/** ## Coupon History ################################### */
+
+#coupons-history-block {
+    padding: 0 8px 20px;
+    display: none;
+}
+
+#coupon-history-table {
+    margin: 0 auto;
+    padding: 0 8px;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+#coupon-history-table th {
+    border-bottom: 2px solid #00592d;
+}
+
+#coupon-history-table td {
+    padding: 3px 5px;
+}
+
+/** ## Coupon Detail #################################### */
+
+.coupon-detail {
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #eaeaea;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    height: 100%;
+    text-align: center;
+    overflow: scroll;
+}
+
+.coupon-detail-wrapper {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 100px;
+}
+
+.coupon-detail-close {
+    text-align: right;
+}
+
+.coupon-detail-note {
+    color: #00592d;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.coupon-detail-img {
+    width: 250px;
+    height: 250px;
+    background-size: contain;
+    margin: 30px auto;
+    border-radius: 3px;
+    box-shadow: #b3b3b3 1px 1px 1px 0;
+}
+
+.coupon-detail-content {
+    padding: 15px 0;
+}
+
+.coupon-detail-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.coupon-detail-properties {
+    width: 100%;
+}
+
+.coupon-detail-property-name {
+    text-align: right;
+    padding: 3px 5px;
+    font-size: 14px;
+}
+
+.coupon-detail-property-value {
+    text-align: left;
+    padding: 3px 5px;
+    font-size: 14px;
+}
+
+.coupon-detail-description {
+    text-align: left;
+    padding: 15px 30px;
+    border-top: 1px dashed #999999;
+}
+
+.coupon-detail-description ol, .coupon-detail-description ul {
+    padding-left: 20px;
+}
+
+.coupon-detail-description:empty {
+    padding: 0;
+    border: 0;
+}
+
+.coupon-detail-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: #00592d;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.coupon-detail-complete {
+    display: none;
+    position: absolute;
+    top: 220px;
+    right: 30px;
+    -webkit-transform: rotate(-24deg);
+    transform: rotate(-24deg);
+    width: 46%;
+    max-width: 190px;
+}
+
+.btn-cancel-button {
+    width: 70%;
+    margin: 10px auto;
+}
+
+/** ## Store Redeem View ###################################### */
+
+.btn-redeem-coupon {
+    width: 70%;
+    margin: 10px auto;
+    background-color: #f7f7f7;
+    color: #2b2b2b;
+}
+
+.btn-send-store-no {
+    border: 0;
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    padding: 15px 40px;
+    background-color: #00592d;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.redeem-view {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow: auto;
+}
+
+.redeem-view-header {
+    background-color: #00592d;
+    overflow: auto;
+    height: 50px;
+    padding: 7px 0;
+}
+
+.redeem-view-header-empty {
+    float: left;
+    width: 41px;
+    height: 41px;
+}
+
+.redeem-view-title {
+    color: #ffffff;
+    text-align: center;
+    line-height: 36px;
+    font-size: 16px;
+}
+
+.redeem-view-close {
+    float: right;
+    width: 36px;
+    height: 36px;
+    margin-right: 5px;
+    padding: 5px;
+}
+
+.redeem-view-image {
+    text-align: center;
+}
+
+.redeem-view-image img {
+    max-width: 300px;
+    width: 80%;
+}
+
+.redeem-view-content {
+    padding: 15px 40px;
+    color: white;
+}
+
+.redeem-view-description {
+    font-size: 14px;
+}
+
+.redeem-view-form {
+    padding-top: 50px;
+}
+
+#store-no {
+    width: 100%;
+    line-height: 18px;
+    padding: 10px;
+}
+
+.redeem-view-loading {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.redeem-view-loading img {
+    width: 64px;
+}
+
+.redeem-message {
+    color: red;
+}
+
+.redeem-view-completed {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 50px;
+    color: #ffffff;
+}
+
+.redeem-view-completed img {
+    width: 150px;
+    -webkit-transform: rotate(-24deg);
+    transform: rotate(-24deg);
+}
+
+
+/** ## Stamping History ###################################### */
+
+.stamping-history-table {
+    width: 100%;
+    max-width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    font-size: 12px;
+    color: #555555;
+}
+
+.stamping-history-table th {
+    padding: 7px 3px;
+    vertical-align: bottom;
+    border-bottom: 2px solid #00592d;
+}
+
+.stamping-history-table td {
+    padding: 7px 3px;
+    vertical-align: top;
+}
+
+
+/** ## Policy ############################################### */
+
+.policy-consent-description {
+    padding: 5px 15px;
+    border-bottom: 1px solid #c3c3c3;
+}
+
+.policy-consent-block {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 15px 25px;
+    background-color: #f7f7f7;
+    border-top: 1px solid #c3c3c3;
+    max-width: 640px;
+}
+
+.policy-view {
+    padding: 15px;
+    background-color: #eaeaea;
+    margin-bottom: 75px;
+}
+
+.policy {
+    margin: 15px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.policy-edm-checkbox {
+    text-align: left;
+    margin: 5px 0 25px 5px;
+}
+
+.policy-edm-checkbox input[type=checkbox] {
+    margin-right: 5px;
+}
+
+.policy ol, .policy ul {
+    padding-left: 15px;
+}
+
+.policy li {
+    margin-bottom: 15px;
+}
